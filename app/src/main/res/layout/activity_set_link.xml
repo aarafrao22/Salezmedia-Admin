@@ -6,10 +6,250 @@
     android:layout_height="match_parent"
     tools:context=".SetLinkActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:includeFontPadding="false"
+                    android:text="Dashboard"
+                    android:textColor="@color/ui_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView1a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:text="Dashboard"
+                    android:textColor="@color/ui_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edLoginLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Login Link"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView1a" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edUpdateLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Update Link"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edLoginLink" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/materialButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    android:text="Update"
+                    android:textSize="12dp"
+                    app:backgroundTint="@color/ui_blue"
+                    app:layout_constraintEnd_toEndOf="@+id/edUpdateLink"
+                    app:layout_constraintTop_toBottomOf="@+id/edUpdateLink" />
+
+                <TextView
+                    android:id="@+id/textView2a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:text="Social Media"
+                    android:textColor="@color/ui_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edInstaUName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Instagram Username"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2a" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edInstaLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Instagram Link"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edInstaUName" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edYtChannel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Youtube Channel"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edInstaLink" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edYtChannelLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Channel Link"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edYtChannel" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdateDash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    android:text="Update"
+                    android:textSize="12dp"
+                    app:backgroundTint="@color/ui_blue"
+                    app:layout_constraintEnd_toEndOf="@+id/edUpdateLink"
+                    app:layout_constraintTop_toBottomOf="@+id/edUpdateLink" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdateSocial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    android:text="Update"
+                    android:textSize="12dp"
+                    app:backgroundTint="@color/ui_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edYtChannelLink" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdateContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    android:text="Update"
+                    android:textSize="12dp"
+                    app:backgroundTint="@color/ui_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edEmail" />
+
+                <TextView
+                    android:id="@+id/textView3a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:text="Contact Us"
+                    android:textColor="@color/ui_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnUpdateSocial" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edWANo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Whatsapp Number"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3a" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edWALink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Whatsapp Link"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edWANo" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_blue"
+                    android:hint="    Email"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edWALink" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginTop="-36dp"
         android:background="@drawable/bg2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,132 +288,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
         app:layout_constraintStart_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:includeFontPadding="false"
-        android:text="Dashboard"
-        android:textColor="@color/ui_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraintLayout3" />
-
-    <TextView
-        android:id="@+id/textView1a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:includeFontPadding="false"
-        android:text="Dashboard"
-        android:textColor="@color/ui_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraintLayout3" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edLoginLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_blue"
-        android:hint="    Login Link"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView1a" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edUpdateLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_blue"
-        android:hint="    Update Link"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edLoginLink" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_blue"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="Update"
-        android:textSize="12dp"
-        app:backgroundTint="@color/ui_blue"
-        app:layout_constraintEnd_toEndOf="@+id/edUpdateLink"
-        app:layout_constraintTop_toBottomOf="@+id/edUpdateLink" />
-
-    <TextView
-        android:id="@+id/textView2a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:includeFontPadding="false"
-        android:text="Social Media"
-        android:textColor="@color/ui_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialButton" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edInstaUName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_blue"
-        android:hint="    Instagram Username"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2a" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edInstaLink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_blue"
-        android:hint="    Instagram Link"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edInstaUName" />
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_blue"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="Update"
-        android:textSize="12dp"
-        app:backgroundTint="@color/ui_blue"
-        app:layout_constraintEnd_toEndOf="@+id/edUpdateLink"
-        app:layout_constraintTop_toBottomOf="@+id/edUpdateLink" />
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@drawable/bg_blue"
-        android:paddingStart="2dp"
-        android:paddingEnd="2dp"
-        android:text="Update"
-        android:textSize="12dp"
-        app:backgroundTint="@color/ui_blue"
-        app:layout_constraintEnd_toEndOf="@+id/edUpdateLink"
-        app:layout_constraintTop_toBottomOf="@+id/edInstaLink" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
