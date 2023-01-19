@@ -68,8 +68,16 @@ public class SetLinkActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void updateSocialMedia() {
+        mDatabase.child("Social").child("ChannelLink").setValue(edChannelLink.getText().toString());
+        mDatabase.child("Social").child("ILink").setValue(edInstagramLink.getText().toString());
+        mDatabase.child("Social").child("YtChannel").setValue(edYtChannel.getText().toString());
+        mDatabase.child("Social").child("iUName").setValue(edInstagramUName.getText().toString());
         Toast.makeText(this, "Social Media Updated", Toast.LENGTH_SHORT).show();
 
+        edYtChannel.setText("");
+        edChannelLink.setText("");
+        edInstagramLink.setText("");
+        edInstagramUName.setText("");
 
     }
 
@@ -84,6 +92,15 @@ public class SetLinkActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void updateContacts() {
+
+        mDatabase.child("Contacts").child("WaLink").setValue(edWALink.getText().toString());
+        mDatabase.child("Contacts").child("WaNo").setValue(edWaNo.getText().toString());
+        mDatabase.child("Contacts").child("Email").setValue(edEmail.getText().toString());
+
+
+        edWALink.setText("");
+        edWaNo.setText("");
+        edEmail.setText("");
         Toast.makeText(this, "Contacts Update", Toast.LENGTH_SHORT).show();
     }
 }

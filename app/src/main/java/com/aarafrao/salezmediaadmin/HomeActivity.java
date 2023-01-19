@@ -34,13 +34,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.item_sm:
+
                 break;
 
             case R.id.item_cu:
                 break;
 
             case R.id.item_login:
-                Toast.makeText(this, "SM", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, SetLinkActivity.class));
                 break;
         }
