@@ -98,7 +98,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/item_cu"
+            android:id="@+id/item_onesignal"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:background="@drawable/bg"
@@ -129,7 +129,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/item_sm"
+            android:id="@+id/item_firebase"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:background="@drawable/bg"

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     LinearLayout item_cu, item_login, item_sm;
@@ -21,8 +20,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initViews() {
-        item_cu = findViewById(R.id.item_cu);
-        item_sm = findViewById(R.id.item_sm);
+        item_cu = findViewById(R.id.item_onesignal);
+        item_sm = findViewById(R.id.item_firebase);
         item_login = findViewById(R.id.item_login);
 
         item_sm.setOnClickListener(this);
@@ -33,11 +32,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.item_sm:
+            case R.id.item_firebase:
+                startActivity(new Intent(this, WebActivity.class).putExtra("url", "https://console.firebase.google.com/u/0/"));
 
                 break;
 
-            case R.id.item_cu:
+            case R.id.item_onesignal:
+                startActivity(new Intent(this, WebActivity.class).putExtra("url", "https://dashboard.onesignal.com/apps"));
                 break;
 
             case R.id.item_login:
