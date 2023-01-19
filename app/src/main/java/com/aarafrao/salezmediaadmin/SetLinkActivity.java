@@ -8,11 +8,15 @@ import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SetLinkActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextInputEditText edLoginLink, edUpdateLink, edInstagramLink, edInstagramUName, edYtChannel, edChannelLink, edWaNo, edWALink, edEmail;
     private MaterialButton btnUpdateDash, btnUpdateSocialMedia, btnUpdateContact;
+    private DatabaseReference mDatabase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,7 @@ public class SetLinkActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void initViews() {
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         btnUpdateContact = findViewById(R.id.btnUpdateContact);
         btnUpdateDash = findViewById(R.id.btnUpdateDash);
         btnUpdateSocialMedia = findViewById(R.id.btnUpdateSocial);
@@ -64,10 +69,18 @@ public class SetLinkActivity extends AppCompatActivity implements View.OnClickLi
 
     private void updateSocialMedia() {
         Toast.makeText(this, "Social Media Updated", Toast.LENGTH_SHORT).show();
+
+
     }
 
     private void updateDashBoard() {
+        mDatabase.child("Dashboard").child("LoginLink").setValue(edLoginLink.getText().toString());
+        mDatabase.child("Dashboard").child("UpdateLink").setValue(edUpdateLink.getText().toString());
         Toast.makeText(this, "Dashboard Updated", Toast.LENGTH_SHORT).show();
+
+        edUpdateLink.setText("");
+        edLoginLink.setText("");
+
     }
 
     private void updateContacts() {
